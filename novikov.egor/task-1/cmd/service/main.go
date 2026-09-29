@@ -20,13 +20,14 @@ func main() {
 	if error != nil {
 		fmt.Println("Invalid operation")
 	}
-	if action == "+" {
+	switch action {
+	case "+":
 		fmt.Println(frst + sec)
-	} else if action == "-" {
+	case "-":
 		fmt.Println(frst - sec)
-	} else if action == "*" {
+	case "*":
 		fmt.Println(frst * sec)
-	} else if action == "/" {
+	case "/":
 		if sec == 0 {
 			fmt.Println("Division by zero")
 			return
