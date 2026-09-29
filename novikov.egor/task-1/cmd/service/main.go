@@ -4,8 +4,21 @@ import "fmt"
 
 func main() {
 	var frst int
-	fmt.Scan(&frst)
+	_, error := fmt.Scan(&frst)
+	if error != nil {
+		fmt.Println("Invalid first operand")
+		return
+	}
 	var sec int
-	fmt.Scan(&sec)
-	fmt.Println(frst + sec)
+	_, error = fmt.Scan(&sec)
+	if error != nil {
+		fmt.Println("Invalid second operand")
+		return
+	}
+	var action string
+	_, error = fmt.Scan(&action)
+	if error != nil {
+		fmt.Println("Invalid operation")
+	}
+
 }
