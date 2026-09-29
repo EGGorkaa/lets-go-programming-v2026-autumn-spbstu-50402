@@ -20,5 +20,17 @@ func main() {
 	if error != nil {
 		fmt.Println("Invalid operation")
 	}
-
+	if action == "+" {
+		fmt.Println(frst + sec)
+	} else if action == "-" {
+		fmt.Println(frst - sec)
+	} else if action == "*" {
+		fmt.Println(frst * sec)
+	} else if action == "/" {
+		if sec == 0 {
+			fmt.Println("Division by zero")
+			return
+		}
+		fmt.Println(frst / sec)
+	}
 }
