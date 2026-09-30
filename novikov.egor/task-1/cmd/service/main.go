@@ -33,5 +33,8 @@ func main() {
 			return
 		}
 		fmt.Println(frst / sec)
+	default:
+		fmt.Println("Invalid operation")
+		return
 	}
 }
