@@ -3,14 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	var frst int
-	_, err := fmt.Scan(&frst)
+	var first int
+	_, err := fmt.Scan(&first)
 	if err != nil {
 		fmt.Println("Invalid first operand")
 		return
 	}
-	var sec int
-	_, err = fmt.Scan(&sec)
+	var second int
+	_, err = fmt.Scan(&second)
 	if err != nil {
 		fmt.Println("Invalid second operand")
 		return
@@ -22,17 +22,17 @@ func main() {
 	}
 	switch action {
 	case "+":
-		fmt.Println(frst + sec)
+		fmt.Println(first + second)
 	case "-":
-		fmt.Println(frst - sec)
+		fmt.Println(first - second)
 	case "*":
-		fmt.Println(frst * sec)
+		fmt.Println(first * second)
 	case "/":
-		if sec == 0 {
+		if second == 0 {
 			fmt.Println("Division by zero")
 			return
 		}
-		fmt.Println(frst / sec)
+		fmt.Println(first / second)
 	default:
 		fmt.Println("Invalid operation")
 		return
